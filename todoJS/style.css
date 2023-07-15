@@ -1,0 +1,270 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(222, 222, 222);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    width: 98%;
+}
+
+
+
+.todoSpace{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, rgb(0, 65, 161)0%, rgb(82, 146, 242)100%);
+    margin: 12rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    border: solid black 4px;
+    border-radius: 3rem;
+}
+
+.addTodo{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: linear-gradient(45deg, rgb(55, 0, 92)0%, rgb(162, 77, 218)100%);
+    border: solid black 3px;
+    border-radius: 3rem;
+}
+
+.addTodo:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(32, 32, 32, 1);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.todos{
+    margin-top: 1rem;
+    background: linear-gradient(45deg, rgb(0, 127, 74)0%, rgb(96, 255, 189)100%);
+    border: solid black 3px;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.todos p{
+    text-align: left;
+    inline-size: 80%;
+    overflow-wrap: break-word;
+    margin-left: 3rem;
+}
+
+.editBtn{
+    float: right;
+    font-size: 1.2rem;
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: solid black 2px;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    background: pink;
+    height: 1.6rem;
+    align-items: center;
+}
+
+.editBtn:hover{
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.todosDone{
+    margin-top: 1rem;
+    background: linear-gradient(45deg, rgb(68, 156, 0)0%, rgb(149, 255, 68)100%);
+    border: solid black 3px;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todosDone p{
+    text-align: left;
+    inline-size: 80%;
+    overflow-wrap: break-word;
+    margin-left: 3rem;
+}
+
+.todos:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(32, 32, 32, 1);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+.todosInModal{
+    margin-top: 1rem;
+    background: linear-gradient(45deg, rgb(0, 127, 74)0%, rgb(96, 255, 189)100%);
+    border: solid black 3px;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todosInModal p{
+    text-align: left;
+    inline-size: 80%;
+    overflow-wrap: break-word;
+    margin-left: 3rem;
+}
+
+.todoBtnInModal{
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: linear-gradient(45deg, rgb(55, 0, 92)0%, rgb(162, 77, 218)100%);
+    border: solid black 3px;
+    border-radius: 3rem;
+}
+
+.popupForm{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #000;
+    border: solid black 2px;
+    visibility: hidden;
+    transition: transform 0.2s, top 0.2s, left 0.2s;
+}
+
+.popupEditForm{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #000;
+    border: solid black 2px;
+    visibility: hidden;
+    transition: transform 0.2s, top 0.2s, left 0.2s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modalBtn{
+    width: 40%;
+    margin-top: 50px;
+    color: pink;
+    background: #000;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.modalBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(32, 32, 32, 1);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.saveBtn{
+    width: 40%;
+    margin-top: 50px;
+    color: pink;
+    background: #000;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.saveBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(32, 32, 32, 1);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.todoName{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none; 
+    border-bottom:1px solid #666565;
+}
+
+.todoName:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #008cff;
+}
+
+.todoName2{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none; 
+    border-bottom:1px solid #666565;
+}
+
+.todoName2:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #008cff;
+}
+
+
+.closePopup{
+    position: absolute;
+    top: -8%;
+    left: 96%;
+    font-size: 1.3rem;
+    border: solid black;
+    border-radius: 1.1rem;
+    padding: 0.2rem;
+    width: 25px;
+    background: white;
+}
+
+.closePopup:hover{
+    cursor: pointer;
+    background: red;
+    color: white;
+}
+
+.closePopup2{
+    position: absolute;
+    top: -8%;
+    left: 96%;
+    font-size: 1.3rem;
+    border: solid black;
+    border-radius: 1.1rem;
+    padding: 0.2rem;
+    width: 25px;
+    background: white;
+}
+
+.closePopup2:hover{
+    cursor: pointer;
+    background: red;
+    color: white;
+}

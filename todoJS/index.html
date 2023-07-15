@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="todo.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="popupForm">
+        <h2>Add your task!</h2>
+        <form>
+          <input type="text" class="todoName" placeholder="New Todo" />
+        </form>
+        <div class="closePopup2"><b>X</b></div>
+        <button class="modalBtn">Add task to list</button>
+      </div>
+      <div class="popupEditForm">
+        <h2 class="popupTitle">Change something?</h2>
+        <form>
+          <input type="text" class="todoName2" placeholder="Edit Todo" />
+        </form>
+        <div class="closePopup"><b>X</b></div>
+        <button class="saveBtn">Save edit</button>
+      </div>
+      <div class="todoSpace">
+        <div class="addTodo">+ Add Todo</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <form>
+  <input type="text" class="todoName" placeholder="Change Todo" />
+</form> -->
